@@ -31,9 +31,9 @@ public class CourseRepositoryImpl implements CourseRepository {
 		
 		Address address = new Address("Muvattupuzha", "kerala", 920745);
 		
-		Student student = new Student("Vishnu",9207450908L,"vishnuLal@gmail.com",address);
+//		Student student = new Student("Vishnu",9207450908L,"vishnuLal@gmail.com",address);
 		
-		list.add(student);
+//		list.add(student);
 		
 		
 		Course c1 = new Course(1, "English", "story", list);

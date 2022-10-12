@@ -2,13 +2,25 @@ package com.cg.onlinelearning.dto;
 
 import java.util.List;
 
-public class Course {
+import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.OneToMany;
+import javax.persistence.Table;
 
+@Entity
+@Table(name = "course")
+public class Course {
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer courseId;
 	private String courseSubject;
 	private String courseTopic;
 	
-	
+	@OneToMany(cascade = CascadeType.ALL,fetch = FetchType.LAZY,mappedBy = "courseData")
 	private List<Student> student;
 	
 	
